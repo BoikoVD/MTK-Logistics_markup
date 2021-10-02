@@ -1,0 +1,134 @@
+//====================================================================================================
+.footer {
+	@include adaptiv-value("padding-top", 100, 70, 1);
+	padding-bottom: 70px;
+	background-color: #040D21;
+	position: relative;
+	&__container {}
+	&__circle {
+		z-index: 0;
+		width: 700px;
+		height: 700px;
+		top: 0;
+		left: 0;
+		transform: translate(-10%, -50%);
+		opacity: 0.7;
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $md2+px){
+			flex-wrap: wrap;
+		}
+	}
+	&__column {
+		position: relative;
+		z-index: 1;
+		&:first-child{
+			flex: 0 0 30%;
+			@media (max-width: $md2+px){
+				order: 1;
+				flex: 0 0 50%;
+			}
+			@media (max-width: 620px){
+				order: 1;
+				flex: 0 0 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		&:nth-child(2){
+			flex: 0 0 40%;
+			@media (max-width: $md2+px){
+				order: 3;
+				flex: 0 0 100%;
+				@include adaptiv-value("margin-top", 100, 40, 1);
+			}
+			@media (max-width: 620px){
+				order: 2;
+				flex: 0 0 100%;
+			}
+		}
+		&:last-child{
+			flex: 0 0 30%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			@media (max-width: $md2+px){
+				order: 2;
+				flex: 0 0 50%;
+			}
+			@media (max-width: 620px){
+				order: 3;
+				flex: 0 0 100%;
+				@include adaptiv-value("margin-top", 100, 40, 1);
+				align-items: center;
+			}
+		}
+	}
+	&__logo {
+		img {
+			width: 100px;
+		}
+	}
+	&__links {}
+	&__text {
+		font-size: 13px;
+		line-height: 140%;
+		text-align: center;
+		color: #FFFFFF;
+		p {
+			&:first-child{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&__contacts {
+		@media (max-width: $md2+px){
+			justify-content: flex-start;
+			align-items: center;
+			.contacts__content {
+				margin-right: 0px;
+			}
+		}
+		@media (max-width: 520px){
+			align-items: flex-start;
+			width: 250px;
+			.contacts-phones._active {
+				background: linear-gradient(rgba(45,13,33,0), rgba(4,13,33,1));
+			}
+			.contacts-phones__list {
+				background-color: #040D21;
+			}
+		}
+	}
+	&__pr-text {
+		font-size: 15px;
+		line-height: 130%;
+		color: #7C8696;
+		text-align: center;
+		margin: 100px 0px 0px 0px;
+	}
+}
+.links-footer {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	margin: 40px 0px 0px 0px;
+	&__text {
+		color: #fff;
+		margin-bottom: 10px;
+	}
+	&__link {
+		color: #3284FF;
+		@media (any-hover: hover) {
+			&:hover{
+			text-decoration: underline;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
