@@ -65,11 +65,11 @@
 	}
 	// .popup__close
 	&__close {
-		width: 15px;
-		height: 15px;
+		width: 30px;
+		height: 30px;
 		position: absolute;
-		top: 0px;
-		right: 0px;
+		top: 15px;
+		right: 10px;
 		cursor: pointer;
 		z-index: 30;
 		background: url("../img/icons/close.svg") 0 0 no-repeat;
